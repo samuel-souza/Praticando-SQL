@@ -2,6 +2,7 @@
 Tabelas utilizadas:
 notas_fiscais
 itens_notas_fiscais
+tabela_de_vendedores
 */
 
 -- Junção, união e visão
@@ -118,4 +119,29 @@ SELECT
 	b.preco
 FROM notas_fiscais_reduzida a
 CROSS JOIN itens_notas_fiscais_reduzida b 
+
+/* 
+UNION usado em tabelas com mesmos valores não há alteração, pois ele só une valores distintos de mesmas colunas
+UNION ALL une independentemente dos valores serem iguais ou não.
+*/
+
+-- UNION
+
+SELECT 
+* 
+FROM tabela_de_vendedores
+UNION
+SELECT 
+* 
+FROM tabela_de_vendedores
+
+-- UNOIN ALL
+
+SELECT 
+* 
+FROM tabela_de_vendedores
+UNION ALL
+SELECT 
+* 
+FROM tabela_de_vendedores
 

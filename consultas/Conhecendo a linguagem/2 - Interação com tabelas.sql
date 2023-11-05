@@ -79,4 +79,19 @@ FROM tabela_de_clientes
 SELECT * FROM tabela_de_clientes 
 SELECT * FROM segunda_tabela
 
+-- Tabelas temporárias
+
+CREATE TABLE #teste (
+	id INT,
+	letra VARCHAR(1)
+)
+
+SELECT * FROM #teste -- Tabela válida apenas durante a conexão do usuário
+
+CREATE TABLE ##teste (
+	id INT,
+	numero INT
+)
+
+SELECT * FROM ##teste -- Tabela válida apenas durante a conexão de todos os usuários conectados
 

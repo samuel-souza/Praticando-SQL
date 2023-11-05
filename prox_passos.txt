@@ -1,0 +1,3 @@
+documentar UNION, VIEW;
+fazer scripts;
+seguir para modelagem;
